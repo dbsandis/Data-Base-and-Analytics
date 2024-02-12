@@ -13,14 +13,19 @@ data.drop(columns=['car name'], inplace=True)
 
 # Log-transform 'mpg' and define predictors and the response variable
 data['lmpg'] = np.log(data['mpg'])
+
+# Example selected_columns based on AIC criteria, adjust accordingly
+selected_columns = ['weight', 'horsepower', 'cylinders']  
+
+# Add constant for intercept in model training and predictions
+X = sm.add_constant(data[selected_columns])
+
 X = data[['cylinders', 'displacement', 'horsepower', 'weight', 'acceleration']]
 y = data['lmpg']
 
-# Adding a constant for the intercept
-X = sm.add_constant(X)
-
-# Split the data into training and testing sets (80% training, 20% testing)
+# Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
 
 # Stepwise regression function
 def stepwise_selection(X, y, criteria):
