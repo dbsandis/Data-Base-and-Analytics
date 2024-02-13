@@ -16,7 +16,7 @@ data.drop(columns=['car name'], inplace=True)
 data['lmpg'] = np.log(data['mpg'])
 
 # Example selected_columns based on AIC criteria, adjust accordingly
-selected_columns = ['weight', 'horsepower', 'cylinders']  
+selected_columns = ['weight', 'horsepower', 'cylinders', 'displacement', 'acceleration']  
 
 # Add constant for intercept in model training and predictions
 X = sm.add_constant(data[selected_columns])
