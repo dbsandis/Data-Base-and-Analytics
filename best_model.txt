@@ -5,7 +5,7 @@ Dep. Variable:                   lmpg   R-squared (uncentered):                 
 Model:                            OLS   Adj. R-squared (uncentered):              0.985
 Method:                 Least Squares   F-statistic:                              4108.
 Date:                Mon, 12 Feb 2024   Prob (F-statistic):                   1.77e-279
-Time:                        15:48:05   Log-Likelihood:                         -140.85
+Time:                        16:21:09   Log-Likelihood:                         -140.85
 No. Observations:                 313   AIC:                                      291.7
 Df Residuals:                     308   BIC:                                      310.4
 Df Model:                           5                                                  
