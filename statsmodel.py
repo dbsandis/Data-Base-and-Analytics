@@ -82,8 +82,6 @@ for criteria, (model, selected_columns) in best_models.items():
 
 best_model, selected_columns = best_models[best_criteria]
 
-best_model, selected_columns = best_models[best_criteria]
-
 # Print the best model and selected features
 print("Best Model (based on {}):".format(best_criteria))
 print(best_model.summary())
